@@ -12,12 +12,14 @@ from datetime import datetime
 # Students can look online for education resources.
 #
 from flask import Flask, Response, request
+from flask_cors import CORS
 
 # DFF TODO At some point, explain the service factory pattern
 from src.service_factory import ServiceFactory
 
 # Create the Flask application object.
 app = Flask(__name__)
+CORS(app)
 
 service_factory = ServiceFactory()
 
